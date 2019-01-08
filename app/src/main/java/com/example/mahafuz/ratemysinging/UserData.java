@@ -3,6 +3,22 @@ package com.example.mahafuz.ratemysinging;
 public class UserData {
     String name;
     int age;
+    String id;
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public UserData(String name, int age, String id) {
+        this.name = name;
+        this.age = age;
+        this.id = id;
+
+    }
 
     public UserData(String name, int age) {
         this.name = name;

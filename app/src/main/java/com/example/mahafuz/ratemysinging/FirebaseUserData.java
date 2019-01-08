@@ -29,7 +29,7 @@ public class FirebaseUserData extends AppCompatActivity {
     List<UserData> data;
     DatabaseReference reference;
     FirebaseDatabase database;
-    UserAdapter adapter;
+    FireBaseUserAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,7 +40,7 @@ public class FirebaseUserData extends AppCompatActivity {
         data = new ArrayList<>();
 
         database = FirebaseDatabase.getInstance();
-        reference = database.getReference().child("User");
+        reference = database.getReference().child(Const.USER);
 
 
         floatingActionButton = findViewById(R.id.addUser);
@@ -50,7 +50,7 @@ public class FirebaseUserData extends AppCompatActivity {
                 startActivity(new Intent(FirebaseUserData.this,AddUserRealTime.class));
             }
         });
-        adapter = new UserAdapter(data);
+        adapter = new FireBaseUserAdapter(data);
 
         reference.addValueEventListener(new ValueEventListener() {
             @Override
@@ -58,9 +58,11 @@ public class FirebaseUserData extends AppCompatActivity {
                 data.clear();
                 for (DataSnapshot child: dataSnapshot.getChildren()) {
                     //Log.e("Name 45",child.child("Name").getValue().toString());
-                    String name = child.child("Name").getValue().toString();
-                    int age = Integer.parseInt(child.child("age").getValue().toString());
-                    data.add(new UserData(name,age));
+                    //Log.d("New Id",child.getKey());
+                    String id = child.getKey();
+                    String name = child.child(Const.NAME).getValue().toString();
+                    int age = Integer.parseInt(child.child(Const.AGE).getValue().toString());
+                    data.add(new UserData(name,age,id));
                     adapter.notifyDataSetChanged();
 
                 }

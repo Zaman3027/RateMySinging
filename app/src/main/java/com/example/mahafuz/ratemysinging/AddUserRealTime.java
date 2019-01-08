@@ -38,7 +38,7 @@ public class AddUserRealTime extends AppCompatActivity {
         setContentView(R.layout.activity_add_user_real_time);
 
         firebaseDatabase = FirebaseDatabase.getInstance();
-        reference = firebaseDatabase.getReference().child("User");
+        reference = firebaseDatabase.getReference().child(Const.USER);
 
         name = findViewById(R.id.nameText);
         age = findViewById(R.id.ageText);
@@ -53,8 +53,8 @@ public class AddUserRealTime extends AppCompatActivity {
             public void onClick(View view) {
                 //data.put(name.getText().toString(),age.getText().toString());
                 if(verify(name.getText().toString(),age.getText().toString())){
-                    data.put("Name",name.getText().toString());
-                    data.put("age",age.getText().toString());
+                    data.put(Const.NAME,name.getText().toString());
+                    data.put(Const.AGE,age.getText().toString());
                     reference.push().setValue(data);
                 }
 
