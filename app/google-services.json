@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "986076915836",
+    "firebase_url": "https://ratemysinging-16687.firebaseio.com",
+    "project_id": "ratemysinging-16687",
+    "storage_bucket": "ratemysinging-16687.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:986076915836:android:c9e62129fb199b3e",
+        "android_client_info": {
+          "package_name": "com.example.mahafuz.ratemysinging"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "986076915836-bai4216hnmampatgbekbcdd8kocsrnlc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.mahafuz.ratemysinging",
+            "certificate_hash": "4c792772c63e02a186d40edac59b3c9d8388fead"
+          }
+        },
+        {
+          "client_id": "986076915836-rkf066iu1d8t8ql7mo02nu7h8bkq93mg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDenTU1Fm2nhqNR2lOyyvp2a8U195rb2x4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "986076915836-rkf066iu1d8t8ql7mo02nu7h8bkq93mg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
