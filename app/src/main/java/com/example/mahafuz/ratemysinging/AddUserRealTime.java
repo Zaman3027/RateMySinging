@@ -59,6 +59,7 @@ public class AddUserRealTime extends AppCompatActivity {
                 }
 
                 startActivity(new Intent(AddUserRealTime.this,FirebaseUserData.class));
+                finish();
             }
         });
 
